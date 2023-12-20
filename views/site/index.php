@@ -2,18 +2,22 @@
 
 /** @var yii\web\View $this */
 
+use yii\bootstrap5\html;
+
 $this->title = 'Basic CRUD Accenture Test';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron text-center bg-transparent mt-5 mb-5">
-        <h1 class="display-4">Congratulations!</h1>
+  <div class="jumbotron text-center bg-transparent mt-5 mb-5">
+    <h1 class="display-4">Shopping List CRUD Example</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+    <p class="lead">Welcome to the Shopping List CRUD example for Accenture test.</p>
 
-        <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+    <?php
+      echo Html::a('Go Shopping!', ['/site/list'], ['class' => 'btn btn-outline-success btn-lg']);
+    ?>
+  </div>
 
-    <div class="body-content">
-    </div>
+  <div class="body-content">
+  </div>
 </div>
