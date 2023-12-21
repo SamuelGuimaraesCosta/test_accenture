@@ -16,31 +16,35 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="product-index">
   <div class="container">
-    <?php
-    echo '<div class="row">';
-    foreach ($products as $product) {
-      echo '<div class="col-md-4 mb-4">';
-      echo '<div class="d-flex flex-column justify-content-between h-100 rounded p-3 border text-center">';
-      echo '<div>';
-      echo '<h3 class="text-wrap fw-bolder text-decoration-underline">' . Html::encode($product->name) . '</h3>';
-      echo '<p>' . Html::encode($product->description) . '</p>';
-      echo '<p>Price: $' . Html::encode($product->price) . '</p>';
-      echo '</div>';
-      echo '<div class="mt-auto text-center">';
-      echo Html::a('Edit', ['product/update', 'id' => $product->id], ['class' => 'btn btn-outline-primary', 'style' => 'margin-right: 5px;']);
-      echo Html::a('Delete', ['product/delete', 'id' => $product->id], [
-        'class' => 'btn btn-outline-danger',
-        'data' => [
-          'confirm' => 'Tem certeza que deseja excluir este produto?',
-          'method' => 'post',
-        ],
-      ]);
-      echo '</div>';
+    <?php if (!empty($products)): ?>
+      <?php
+      echo '<div class="row">';
+      foreach ($products as $product) {
+        echo '<div class="col-md-6 mb-4">';
+        echo '<div class="flex-column justify-content-between h-100 rounded p-3 border text-center text-wrap text-truncate">';
+        echo '<div>';
+        echo '<h3 class="text-wrap fw-bolder text-decoration-underline">' . Html::a(Html::encode($product->name), ['/product/view']) . '</h3>';
+        echo '<p class="text-wrap">' . Html::encode($product->description) . '</p>';
+        echo '<p>Price: $' . Html::encode($product->price) . '</p>';
+        echo '</div>';
+        echo '<div class="mt-auto text-center">';
+        echo Html::a('Edit', ['product/update', 'id' => $product->id], ['class' => 'btn btn-outline-primary', 'style' => 'margin-right: 5px;']);
+        echo Html::a('Delete', ['product/delete', 'id' => $product->id], [
+          'class' => 'btn btn-outline-danger',
+          'data' => [
+            'confirm' => 'Tem certeza que deseja excluir este produto?',
+            'method' => 'post',
+          ],
+        ]);
+        echo '</div>';
 
+        echo '</div>';
+        echo '</div>';
+      }
       echo '</div>';
-      echo '</div>';
-    }
-    echo '</div>';
-    ?>
+      ?>
+    <?php else: ?>
+      <div class="alert alert-warning text-center text-wrap fw-bolder" role="alert">
+        There are no products available at the moment.
+      </div <?php endif; ?> </div>
   </div>
-</div>
