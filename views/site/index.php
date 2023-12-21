@@ -16,6 +16,9 @@ $this->title = 'Basic CRUD Accenture Test';
     <?php
     echo Html::a('Go Shopping!', ['/product/index'], ['class' => 'btn btn-outline-success btn-lg']);
     ?>
+
+<p class="lead">EN-US: If you want to follow the entire development of this application, <a href="https://github.com/SamuelGuimaraesCosta/test_accenture" target="_blank">access here</a></p>
+<p class="lead">PT-BR: Se você desejar acompanhar todo o desenvolvimento desta aplicação, <a href="https://github.com/SamuelGuimaraesCosta/test_accenture" target="_blank">acesse aqui</a></p>
   </div>
 
   <div class="body-content">

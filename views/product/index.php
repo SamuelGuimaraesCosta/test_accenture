@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
-  <h1 class="text-center text-wrap fw-bolder text-decoration-underline">
+  <h1 class="text-center text-wrap fw-bolder">
     <?= Html::encode($this->title) ?>
   </h1>
   <?= Html::a('New Product', ['/product/create'], ['class' => 'btn btn-outline-success btn-lg']); ?>
