@@ -14,7 +14,7 @@ $this->title = 'Basic CRUD Accenture Test';
     <p class="lead">Welcome to the Shopping List CRUD example for Accenture test.</p>
 
     <?php
-      echo Html::a('Go Shopping!', ['/site/list'], ['class' => 'btn btn-outline-success btn-lg']);
+    echo Html::a('Go Shopping!', ['/product/index'], ['class' => 'btn btn-outline-success btn-lg']);
     ?>
   </div>
 
