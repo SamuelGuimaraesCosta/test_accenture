@@ -35,6 +35,7 @@ class Product extends \yii\db\ActiveRecord
             [['create_date', 'update_date'], 'safe'],
             [['name'], 'string', 'max' => 400],
             [['description'], 'string', 'max' => 500],
+            [['price'], 'required']
         ];
     }
 
