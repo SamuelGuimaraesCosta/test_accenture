@@ -5,6 +5,7 @@
 use yii\helpers\Html;
 
 $this->title = 'Products List';
+$this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
