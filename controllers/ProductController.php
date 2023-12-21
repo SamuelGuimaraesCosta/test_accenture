@@ -69,4 +69,10 @@ class ProductController extends Controller
       return $this->render('product-form', ['model' => $model]);
     }
   }
+
+  public function actionView($id) {
+    $model = Product::find()->where(['id' => $id])->one();
+
+    return $this->render('product-view', ['model' => $model]);
+  }
 }

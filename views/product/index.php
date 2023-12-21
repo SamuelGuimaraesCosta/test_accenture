@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
         echo '<div class="col-md-6 mb-4">';
         echo '<div class="flex-column justify-content-between h-100 rounded p-3 border text-center text-wrap text-truncate">';
         echo '<div>';
-        echo '<h3 class="text-wrap fw-bolder text-decoration-underline">' . Html::a(Html::encode($product->name), ['/product/view']) . '</h3>';
+        echo '<h3 class="text-wrap fw-bolder text-decoration-underline">' . Html::a(Html::encode($product->name), ['/product/view', 'id' => $product->id]) . '</h3>';
         echo '<p class="text-wrap">' . Html::encode($product->description) . '</p>';
         echo '<p>Price: $' . Html::encode($product->price) . '</p>';
         echo '</div>';

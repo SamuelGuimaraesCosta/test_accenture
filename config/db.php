@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=accenture_crud',
-    'username' => 'root',
-    'password' => '',
+    'dsn' => 'mysql:host=192.168.1.140;dbname=accenture_crud',
+    'username' => 'samuel',
+    'password' => '123456',
     'charset' => 'utf8'
 
     // Schema cache options (for production environment)
